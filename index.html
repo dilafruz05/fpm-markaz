@@ -3,88 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Namangan Viloyat Ftiziatriya va Pulmonologiya Markazi</title>
+    <title>Namangan FPM Markazi - Bosh sahifa</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        .hero { background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('./images/building.jpg') center/cover no-repeat; min-height: 100vh; }
-    </style>
 </head>
-<body class="font-sans">
+<body class="font-sans bg-gray-50">
 
     <nav class="bg-blue-700 text-white sticky top-0 z-50 shadow-lg">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <img src="./images/logo.png" alt="Logo" class="w-12 h-12 rounded-full">
+                <img src="logo.png" alt="Logo" class="w-12 h-12 rounded-full border-2 border-white">
                 <div>
-                    <h1 class="text-2xl font-bold">FPM Markazi</h1>
-                    <p class="text-xs text-blue-200">Namangan viloyati</p>
+                    <h1 class="text-xl md:text-2xl font-bold">FPM Markazi</h1>
+                    <p class="text-[10px] text-blue-200 uppercase tracking-widest">Namangan viloyati</p>
                 </div>
             </div>
-            <div class="hidden md:flex gap-8 text-lg">
-                <a href="index.html" class="hover:text-emerald-300 transition">Bosh sahifa</a>
+            
+            <div class="hidden md:flex gap-8 text-lg font-medium">
+                <a href="index.html" class="text-emerald-400">Bosh sahifa</a>
                 <a href="about.html" class="hover:text-emerald-300 transition">Markaz haqida</a>
                 <a href="services.html" class="hover:text-emerald-300 transition">Xizmatlar</a>
                 <a href="doctors.html" class="hover:text-emerald-300 transition">Shifokorlar</a>
                 <a href="contact.html" class="hover:text-emerald-300 transition">Kontaktlar</a>
             </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-blue-800 border-t border-blue-600 transition-all">
+            <div class="flex flex-col space-y-2 px-6 py-6 font-medium">
+                <a href="index.html" class="py-3 border-b border-blue-700 text-emerald-400">Bosh sahifa</a>
+                <a href="about.html" class="py-3 border-b border-blue-700">Markaz haqida</a>
+                <a href="services.html" class="py-3 border-b border-blue-700">Xizmatlar</a>
+                <a href="doctors.html" class="py-3 border-b border-blue-700">Shifokorlar</a>
+                <a href="contact.html" class="py-3">Kontaktlar</a>
+            </div>
         </div>
     </nav>
 
-    <header class="hero flex items-center text-white">
-        <div class="max-w-5xl mx-auto text-center px-6">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6">Namangan Viloyat<br>Ftiziatriya va Pulmonologiya Markazi</h1>
-            <p class="text-2xl md:text-3xl mb-10">Sil va o‘pka kasalliklarini zamonaviy uskunalar bilan davolash</p>
-            <a href="contact.html" class="bg-emerald-600 hover:bg-emerald-700 px-10 py-5 rounded-full text-xl font-semibold inline-block transition shadow-xl">Qabulga yozilish</a>
+    <header class="relative h-[80vh] flex items-center justify-center text-white overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="building.jpg" alt="Bino" class="w-full h-full object-cover brightness-[0.4]">
+        </div>
+        <div class="relative z-10 text-center px-6">
+            <h2 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">Sizning sog'lig'ingiz - <br><span class="text-emerald-400">bizning oliy maqsadimiz</span></h2>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto mb-10 text-gray-200">Namangan viloyat ftiziatriya va pulmonologiya markazi zamonaviy texnologiyalar va tajribali shifokorlar bilan xizmatingizda.</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="contact.html" class="bg-emerald-600 hover:bg-emerald-700 px-10 py-4 rounded-full text-lg font-bold transition shadow-xl">Qabulga yozilish</a>
+                <a href="services.html" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 px-10 py-4 rounded-full text-lg font-bold transition">Xizmatlar bilan tanishish</a>
+            </div>
         </div>
     </header>
 
-    <!-- Afzalliklar -->
-    <div class="max-w-7xl mx-auto px-6 py-20">
-        <h2 class="text-4xl font-bold text-center text-blue-800 mb-12">Nima uchun bizni tanlashadi?</h2>
-        <div class="grid md:grid-cols-4 gap-8">
-            <div class="text-center">
-                <i class="fa-solid fa-stethoscope text-5xl text-emerald-600 mb-4"></i>
-                <h3 class="font-semibold text-xl">Tajribali shifokorlar</h3>
-            </div>
-            <div class="text-center">
-                <i class="fa-solid fa-microscope text-5xl text-emerald-600 mb-4"></i>
-                <h3 class="font-semibold text-xl">Zamonaviy uskunalar</h3>
-            </div>
-            <div class="text-center">
-                <i class="fa-solid fa-hospital text-5xl text-emerald-600 mb-4"></i>
-                <h3 class="font-semibold text-xl">Statsionar va poliklinika</h3>
-            </div>
-            <div class="text-center">
-                <i class="fa-solid fa-heart text-5xl text-emerald-600 mb-4"></i>
-                <h3 class="font-semibold text-xl">Mehribon yondashuv</h3>
-            </div>
-        </div>
-    </div>
-
-    <!-- Tezkor kontakt -->
-    <div class="bg-blue-50 py-16">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-center">
-            <div>
-                <i class="fa-solid fa-phone text-4xl text-emerald-600 mb-3"></i>
-                <p class="text-3xl font-bold"><a href="tel:+998692247214" class="text-emerald-600">+998 69 224 72 14</a></p>
-                <p class="text-gray-600">24/7 maslahat uchun qo‘ng‘iroq qiling</p>
-            </div>
-            <div>
-                <i class="fa-solid fa-map-marker-alt text-4xl text-blue-600 mb-3"></i>
-                <p class="font-semibold">Namangan sh., Q.Otamirzaev ko‘chasi, 36-uy</p>
-            </div>
-            <div>
-                <i class="fa-solid fa-user-doctor text-4xl text-blue-600 mb-3"></i>
-                <p class="font-semibold">Direktor: A.F. Botirov</p>
-            </div>
-        </div>
-    </div>
-
-    <footer class="bg-gray-900 text-white py-12 text-center">
-        <p class="text-lg">&copy; 2026 Namangan Viloyat Ftiziatriya va Pulmonologiya Markazi</p>
-        <p class="mt-2 text-gray-400">Sog‘liqni saqlash vazirligi tasarrufidagi muassasa</p>
-    </footer>
-
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            btn.querySelector('i').classList.toggle('fa-bars');
+            btn.querySelector('i').classList.toggle('fa-xmark');
+        });
+    </script>
 </body>
 </html>

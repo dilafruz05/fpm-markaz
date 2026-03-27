@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shifokorlar - Namangan FPM Markazi</title>
+    <title>Shifokorlar - FPM Markazi</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -12,44 +12,57 @@
     <nav class="bg-blue-700 text-white sticky top-0 z-50 shadow-lg">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <img src="./images/logo.png" alt="Logo" class="w-12 h-12 rounded-full">
-                <h1 class="text-2xl font-bold">FPM Markazi</h1>
+                <img src="logo.png" alt="Logo" class="w-12 h-12 rounded-full border-2 border-white">
+                <h1 class="text-xl md:text-2xl font-bold">FPM Markazi</h1>
             </div>
             <div class="hidden md:flex gap-8 text-lg">
                 <a href="index.html">Bosh sahifa</a>
                 <a href="about.html">Markaz haqida</a>
                 <a href="services.html">Xizmatlar</a>
-                <a href="doctors.html">Shifokorlar</a>
+                <a href="doctors.html" class="text-emerald-400">Shifokorlar</a>
                 <a href="contact.html">Kontaktlar</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl focus:outline-none"><i class="fa-solid fa-bars"></i></button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-blue-800 border-t border-blue-600">
+            <div class="flex flex-col space-y-2 px-6 py-6">
+                <a href="index.html" class="py-3 border-b border-blue-700">Bosh sahifa</a>
+                <a href="about.html" class="py-3 border-b border-blue-700">Markaz haqida</a>
+                <a href="services.html" class="py-3 border-b border-blue-700">Xizmatlar</a>
+                <a href="doctors.html" class="py-3 border-b border-blue-700 text-emerald-400">Shifokorlar</a>
+                <a href="contact.html" class="py-3">Kontaktlar</a>
             </div>
         </div>
     </nav>
 
-    <div class="max-w-6xl mx-auto px-6 py-20">
-        <h1 class="text-5xl font-bold text-center text-blue-900 mb-16">Bizning shifokorlar jamoasi</h1>
-        
+    <div class="max-w-5xl mx-auto px-6 py-16">
+        <h2 class="text-4xl font-bold text-center text-blue-900 mb-12">Malakali shifokorlarimiz</h2>
         <div class="grid md:grid-cols-2 gap-10">
-            <!-- Direktor -->
-            <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
-                <div class="h-80 bg-gray-200 flex items-center justify-center text-9xl">👨‍⚕️</div>
-                <div class="p-8">
-                    <h3 class="text-2xl font-semibold">A.F. Botirov</h3>
-                    <p class="text-emerald-600 font-medium">Direktor • Yuqori toifali ftiziatr</p>
-                    <p class="mt-4 text-gray-600">Ko‘p yillik tajribaga ega mutaxassis. Markazni muvaffaqiyatli boshqarib kelmoqda.</p>
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+                <div class="md:w-1/2 bg-gray-200 h-64 md:h-auto flex items-center justify-center text-8xl">👨‍⚕️</div>
+                <div class="p-8 md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-2">A.F. Botirov</h3>
+                    <p class="text-emerald-600 font-semibold mb-4 italic">Direktor • Oliy toifali shifokor</p>
+                    <p class="text-gray-600 text-sm">Ko'p yillik rahbarlik tajribasiga ega, soha rivojiga katta hissa qo'shib kelayotgan mutaxassis.</p>
                 </div>
             </div>
-
-            <!-- Qo'shimcha joy (keyinroq to'ldirish uchun) -->
-            <div class="bg-white rounded-3xl shadow-xl overflow-hidden opacity-90">
-                <div class="h-80 bg-gray-200 flex items-center justify-center text-9xl">👩‍⚕️</div>
-                <div class="p-8">
-                    <h3 class="text-2xl font-semibold text-gray-400">Boshqa shifokorlar</h3>
-                    <p class="text-gray-500 mt-4">Shifokorlar ro‘yxati va ularning malakasi tez orada to‘ldiriladi.</p>
-                    <p class="text-sm text-gray-400 mt-6">Ma’lumot qo‘shish uchun rahbariyatga murojaat qiling.</p>
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row border-dashed border-2 border-gray-200">
+                <div class="md:w-1/2 bg-gray-100 h-64 md:h-auto flex items-center justify-center text-8xl opacity-30">👩‍⚕️</div>
+                <div class="p-8 md:w-1/2 flex items-center">
+                    <p class="text-gray-400 italic">Boshqa mutaxassislar haqida ma'lumotlar tez orada qo'shiladi...</p>
                 </div>
             </div>
         </div>
     </div>
 
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            btn.querySelector('i').classList.toggle('fa-bars');
+            btn.querySelector('i').classList.toggle('fa-xmark');
+        });
+    </script>
 </body>
 </html>
